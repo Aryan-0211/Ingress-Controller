@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wear-service
+spec:
+  selector:
+    app: wear-app  # Adjust this to match your deployment label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80  # Adjust to the port your application listens on
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: watch-service
+spec:
+  selector:
+    app: watch-app  # Adjust this to match your deployment label
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80  # Adjust to the port your application listens on
