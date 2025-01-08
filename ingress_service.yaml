@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    name: nginx-ingress  # Ensure this matches your pod labels
+    name: nginx-ingress  
   ports:
   - port: 80
     targetPort: 80
